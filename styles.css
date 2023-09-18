@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+}
+
+#server-input {
+    display: block;
+    margin: 10px auto;
+    width: 300px;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+}
+
+#status-result {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
