@@ -2,7 +2,7 @@ function checkServerStatus() {
     var serverInput = document.getElementById("server-input").value;
 
     // Make a request to the API
-    fetch('https://api.example.com/check-status?server=' + serverInput)
+    fetch('http://127.0.0.1:8000/check_website' + serverInput)
         .then(function(response) {
             if (response.ok) {
                 return response.text();
