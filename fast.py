@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 import httpx
+import requests
 
 expressions_dict = {
     200: "Access is allowed - OK.",
@@ -19,7 +20,7 @@ app = FastAPI()
 async def check_website(url: str):
     async with httpx.AsyncClient() as client:
         response = await client.get(url)
-        return {"status_code": response.status_code}
+        return {"status_code": expressions_dict[response.status_code]}
 
 
 @app.get('/')
